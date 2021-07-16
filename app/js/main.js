@@ -14,6 +14,7 @@ $(function () {
       ratedFill: "#ffc35b",
       readOnly: true
    });
+
    function getTimeRemaining(endtime) {
       const total = Date.parse(endtime) - Date.parse(new Date());
       const seconds = Math.floor((total / 1000) % 60);
