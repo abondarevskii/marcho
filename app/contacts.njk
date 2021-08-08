@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/contacts.min.css">
+</head>
+
+<body>
+   {% include "app/modules/_header/_header.html" %}
+   <main class="main">
+        {% include "app/modules/_top/_top.html" %}  
+
+
+
+      <section class="map">
+         <div class="container">
+            <div id="map"></div>
+         </div>
+      </section>
+
+      <section class="contact">
+         <div class="container">
+            <div class="contact__inner">
+               <div class="contact__info">
+                  <h3 class="contact__info-title">Feel Free Don’t
+                     Hesitate To
+                     Contact With Us
+                  </h3>
+                  <p class="contact__info-text">
+                     Lorem ipsum dolor sit amet, consectetur adingn elit, sed do eiusmod tempor incididunt ut labore et
+                     dolore magna aliqua.
+                     Quis ipsum suspendisse ultrices gravida. Risus commodo maecnaacnrao cumsan lacus vel facilisis.
+                  </p>
+                  <ul class="contact__info-list">
+                     <li class="contact__info-item">
+                        <a class="contact__info-phone" href="tel:+01234567896">+0-123-456-7896</a>
+                        <a class="contact__info-phone" href="tel:+01234567896">+0-123-456-7896</a>
+                     </li>
+                     <li class="contact__info-item contact__info-item--location">
+                        Ranlon Market 789 Road,
+                        Market Street, Newyork
+                     </li>
+                     <li class="contact__info-item contact__info-item--email">
+                        <a class="contact__info-email" href="mailto:">yourmailaddress@gmail.com</a> <br>
+                        <span>companymail@gmail.com</span>
+                     </li>
+                  </ul>
+               </div>
+               <form class="contact__form" action="#">
+                  <div class="contact__form-title">Contact Form</div>
+                  <div class="contact__form-box">
+                     <input class="contact__form-input" type="text" placeholder="Your Name">
+                     <input class="contact__form-input" type="text" placeholder="Your E-mail Address">
+                  </div>
+                  <input class="contact__form-input" type="text" placeholder="Subject">
+                  <textarea class="contact__form-textarea" placeholder="Message here"></textarea>
+                  <button class="contact__form-btn" type="submit">SEND MESSAGE</button>
+               </form>
+            </div>
+         </div>
+      </section>
+
+
+
+   </main>
+   
+   {% include "app/modules/_footer/_footer.html" %}
+
+   <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async></script>
+   <script>
+      let map;
+
+      function initMap() {
+         map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 40.76999246076157, lng: -73.9838306312843 },
+            zoom: 13,
+            styles: [
+               {
+                  "featureType": "administrative",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                     {
+                        "color": "#0c2d64"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "landscape",
+                  "elementType": "geometry.fill",
+                  "stylers": [
+                     {
+                        "color": "#eae6e7"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "landscape",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                     {
+                        "color": "#0c2d64"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "landscape.man_made",
+                  "elementType": "geometry.fill",
+                  "stylers": [
+                     {
+                        "color": "#eaeaea"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "landscape.man_made",
+                  "elementType": "geometry.stroke",
+                  "stylers": [
+                     {
+                        "visibility": "on"
+                     },
+                     {
+                        "color": "#e0dede"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "poi",
+                  "elementType": "geometry.fill",
+                  "stylers": [
+                     {
+                        "color": "#e0e0e0"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "poi",
+                  "elementType": "geometry.stroke",
+                  "stylers": [
+                     {
+                        "color": "#d6caca"
+                     },
+                     {
+                        "visibility": "off"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "poi",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                     {
+                        "color": "#0c2d64"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "poi",
+                  "elementType": "labels.icon",
+                  "stylers": [
+                     {
+                        "color": "#bfbfc0"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "poi.attraction",
+                  "elementType": "geometry.stroke",
+                  "stylers": [
+                     {
+                        "visibility": "off"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "poi.business",
+                  "elementType": "geometry.stroke",
+                  "stylers": [
+                     {
+                        "visibility": "off"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "poi.government",
+                  "elementType": "geometry.stroke",
+                  "stylers": [
+                     {
+                        "visibility": "off"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "poi.medical",
+                  "elementType": "geometry.stroke",
+                  "stylers": [
+                     {
+                        "visibility": "off"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "poi.park",
+                  "elementType": "geometry.stroke",
+                  "stylers": [
+                     {
+                        "visibility": "off"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "poi.place_of_worship",
+                  "elementType": "geometry.stroke",
+                  "stylers": [
+                     {
+                        "visibility": "off"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "poi.school",
+                  "elementType": "geometry.stroke",
+                  "stylers": [
+                     {
+                        "visibility": "off"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "road",
+                  "elementType": "geometry.fill",
+                  "stylers": [
+                     {
+                        "color": "#f7f6f6"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "road",
+                  "elementType": "geometry.stroke",
+                  "stylers": [
+                     {
+                        "color": "#ffffff"
+                     },
+                     {
+                        "visibility": "off"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "road",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                     {
+                        "color": "#0c2d64"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "transit",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                     {
+                        "color": "#0c2d64"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "transit",
+                  "elementType": "labels.icon",
+                  "stylers": [
+                     {
+                        "hue": "#ff0000"
+                     },
+                     {
+                        "saturation": "-100"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "water",
+                  "elementType": "geometry.fill",
+                  "stylers": [
+                     {
+                        "color": "#f6c6dc"
+                     }
+                  ]
+               },
+               {
+                  "featureType": "water",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                     {
+                        "color": "#0c2d64"
+                     }
+                  ]
+               }
+            ]
+         });
+      }
+   </script>
+   <script src="js/main.min.js"></script>
+</body>
+
+</html>
